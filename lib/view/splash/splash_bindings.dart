@@ -1,8 +1,10 @@
-import 'package:get/get_instance/src/bindings_interface.dart';
+import 'package:get/get.dart';
+import 'package:getx_app/view/splash/splash_controller.dart';
 
-class HomeBindings implements Bindings {
+class SplashBindings implements Bindings {
   @override
   void dependencies() {
     // TODO: implement dependencies
+    Get.put<SplashController>(SplashController());
   }
 }

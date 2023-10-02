@@ -9,9 +9,23 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-          child: Column(
-        children: [Text("name count:${controller.nameCount.value}")],
-      )),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "name count:${controller.nameCount.value}",
+              style: TextStyle(fontSize: 22),
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          controller.nameCount++;
+        },
+        child: Icon(Icons.add),
+      ),
     );
   }
 }
